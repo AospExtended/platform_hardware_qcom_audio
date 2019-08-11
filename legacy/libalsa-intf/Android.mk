@@ -8,7 +8,6 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= aplay.c
 LOCAL_MODULE:= aplay
 LOCAL_SHARED_LIBRARIES:= libc libcutils libalsa-intf
-LOCAL_MODULE_TAGS:= debug
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
@@ -16,21 +15,18 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= arec.c
 LOCAL_MODULE:= arec
 LOCAL_SHARED_LIBRARIES:= libc libcutils libalsa-intf
-LOCAL_MODULE_TAGS:= debug
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= amix.c
 LOCAL_MODULE:= amix
 LOCAL_SHARED_LIBRARIES := libc libcutils libalsa-intf
-LOCAL_MODULE_TAGS:= debug
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= alsaucm_test.c
 LOCAL_MODULE:= alsaucm_test
 LOCAL_SHARED_LIBRARIES:= libc libcutils libalsa-intf
-LOCAL_MODULE_TAGS:= debug
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
@@ -43,7 +39,6 @@ LOCAL_MODULE:= libalsa-intf
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES:= libc libcutils #libutils #libmedia libhardware_legacy
 LOCAL_CFLAGS := -DQC_PROP -DCONFIG_DIR=\"/system/etc/snd_soc_msm/\"
-
 LOCAL_SHARED_LIBRARIES += libdl
 include $(BUILD_SHARED_LIBRARY)
 endif
